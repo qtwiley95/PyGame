@@ -53,6 +53,7 @@ def play_game():
 					for event in pygame.event.get():
 						if event.type == pygame.KEYDOWN:
 							if(event.key == pygame.K_c):
+								esc = False
 								play_game()
 							elif(event.key == pygame.K_q):
 								gameExit = True
@@ -93,6 +94,7 @@ def play_game():
 		screen.fill((250, 250, 250))
 		#print pygame.event
 		pygame.draw.rect(screen, RED, [lead_x, lead_y, 10, 10])
+    pygame.draw.rect(screen, BLACK, [150, 10, 50, 20])
 		pygame.display.update()
 
 		clock.tick(40)
